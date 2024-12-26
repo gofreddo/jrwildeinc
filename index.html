@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags -->
+    <title>JRWilde Inc - Professional Software Solutions</title>
+    <meta
+      name="title"
+      content="JRWilde Inc - Professional Software Solutions"
+    />
+    <meta
+      name="description"
+      content="JRWilde Inc delivers exceptional software development and consulting solutions. Specializing in web applications, databases, and enterprise software."
+    />
+    <meta
+      name="keywords"
+      content="software development, web development, consulting, database design, enterprise software, JRWilde Inc"
+    />
+    <meta name="author" content="JRWilde Inc" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.jrwilde.com/" />
+    <meta
+      property="og:title"
+      content="JRWilde Inc - Professional Software Solutions"
+    />
+    <meta
+      property="og:description"
+      content="JRWilde Inc delivers exceptional software development and consulting solutions. Specializing in web applications, databases, and enterprise software."
+    />
+    <meta
+      property="og:image"
+      content="https://www.jrwilde.com/images/og-image.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.jrwilde.com/" />
+    <meta
+      property="twitter:title"
+      content="JRWilde Inc - Professional Software Solutions"
+    />
+    <meta
+      property="twitter:description"
+      content="JRWilde Inc delivers exceptional software development and consulting solutions. Specializing in web applications, databases, and enterprise software."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.jrwilde.com/images/twitter-image.jpg"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- IE compatibility -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Security -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' https://images.unsplash.com; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'"
+    />
+
+    <!-- Cache control -->
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(145deg, #f0f2f5, #e5e9f0);
+        min-height: 100vh;
+      }
+
+      .header {
+        background: linear-gradient(
+            rgba(44, 62, 80, 0.9),
+            rgba(44, 62, 80, 0.9)
+          ),
+          url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 4rem 0;
+        text-align: center;
+      }
+
+      .nav {
+        background-color: rgba(52, 73, 94, 0.95);
+        backdrop-filter: blur(5px);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav a:hover {
+        color: #3498db;
+      }
+
+      .main-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 1rem;
+      }
+
+      .hero {
+        text-align: center;
+        margin-bottom: 3rem;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+          url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 8rem 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      .feature-card {
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.95),
+            rgba(255, 255, 255, 0.95)
+          ),
+          url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80');
+        background-size: cover;
+        background-position: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .about-section,
+      .services-section,
+      .team-section,
+      .contact-section {
+        padding: 2rem 0;
+        background: linear-gradient(145deg, #f8f9fa, #ffffff);
+        border-bottom: 1px solid #eee;
+        margin-bottom: 2rem;
+      }
+
+      .about-section > p,
+      .services-section > p,
+      .features,
+      .services-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .team-section {
+        padding: 2rem 0;
+        background: linear-gradient(145deg, #f8f9fa, #ffffff);
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 2rem auto;
+        max-width: 1200px;
+        padding: 0 1rem;
+      }
+
+      .about-section h2,
+      .services-section h2,
+      .team-section h2,
+      .contact-section h2 {
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .service-card {
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.95),
+            rgba(255, 255, 255, 0.95)
+          ),
+          url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80');
+        background-size: cover;
+        background-position: center;
+        padding: 2rem;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .service-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .form-group {
+        margin-bottom: 1rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.25rem;
+        font-weight: 500;
+        color: #2c3e50;
+      }
+
+      .required {
+        color: #e74c3c;
+        margin-left: 3px;
+        font-size: 0.85rem;
+        font-weight: normal;
+        transition: opacity 0.3s ease;
+      }
+
+      .input-hint {
+        display: block;
+        margin-top: 0.15rem;
+        font-size: 0.85rem;
+        color: #666;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+        margin: 0.25rem 0;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+      }
+
+      .btn {
+        background: linear-gradient(135deg, #2c3e50, #34495e);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn:hover {
+        background: linear-gradient(135deg, #34495e, #2c3e50);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .btn:disabled {
+        background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+        cursor: not-allowed;
+        transform: none;
+        opacity: 0.7;
+        box-shadow: none;
+      }
+
+      .btn:disabled:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      .footer {
+        background: linear-gradient(to right, #2c3e50, #34495e);
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+        margin-top: 3rem;
+      }
+
+      .social-links {
+        margin-top: 1rem;
+      }
+
+      .social-links a {
+        color: white;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+
+      .contact-section {
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.9),
+            rgba(255, 255, 255, 0.9)
+          ),
+          url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .team-section {
+        background: linear-gradient(145deg, #f8f9fa, #ffffff);
+      }
+
+      .team-section h2 {
+        padding: 0 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 2rem auto;
+        max-width: 1200px;
+        padding: 0 1rem;
+      }
+
+      .team-card {
+        background: white;
+        border-radius: 10px;
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .team-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .team-card img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 1.5rem auto;
+        border: 3px solid #f8f9fa;
+        display: block;
+      }
+
+      .team-card h3 {
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+      }
+
+      .team-card .title {
+        color: #3498db;
+        font-weight: 500;
+        margin-bottom: 1rem;
+      }
+
+      .team-card .bio {
+        font-size: 0.9rem;
+        color: #666;
+        line-height: 1.6;
+      }
+
+      /* Make it responsive */
+      @media (max-width: 1024px) {
+        .team-grid {
+          grid-template-columns: repeat(
+            2,
+            1fr
+          ); /* 2 columns on medium screens */
+        }
+      }
+
+      @media (max-width: 768px) {
+        .team-grid {
+          grid-template-columns: 1fr; /* 1 column on mobile */
+        }
+      }
+
+      .confirmation-popup {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: linear-gradient(145deg, #4caf50, #45a049);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .confirmation-popup.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .confirmation-popup .check-icon {
+        font-size: 1.5rem;
+      }
+
+      #charCount {
+        font-weight: bold;
+      }
+
+      /* Make all sections responsive in the same way */
+      @media (max-width: 768px) {
+        .features,
+        .services-grid,
+        .team-grid {
+          grid-template-columns: 1fr;
+          padding: 0 1rem;
+        }
+
+        .feature-card,
+        .service-card,
+        .team-card {
+          margin-bottom: 1rem;
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 1024px) {
+        .features,
+        .services-grid,
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const contactForm = document.querySelector('.contact-form');
+        const submitBtn = contactForm.querySelector('.btn');
+        const inputs = {
+          name: document.getElementById('name'),
+          email: document.getElementById('email'),
+          message: document.getElementById('message'),
+        };
+
+        const emailHint = inputs.email.nextElementSibling;
+        const nameHint = inputs.name.nextElementSibling;
+        const charCount = document.getElementById('charCount');
+        const maxLength = 500;
+
+        // Validate email format
+        function isValidEmail(email) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        // Check if all fields are valid
+        function validateForm() {
+          const nameValid = inputs.name.value.trim().length >= 2;
+          const emailValid = isValidEmail(inputs.email.value.trim());
+          const messageValid = inputs.message.value.trim().length >= 10;
+
+          // Show/hide name hint
+          if (inputs.name.value.trim() && !nameValid) {
+            nameHint.style.display = 'block';
+          } else {
+            nameHint.style.display = 'none';
+          }
+
+          // Show/hide email hint
+          if (inputs.email.value.trim() && !emailValid) {
+            emailHint.style.display = 'block';
+          } else {
+            emailHint.style.display = 'none';
+          }
+
+          // Update character count color
+          const messageLength = inputs.message.value.length;
+          charCount.style.color = messageLength >= 10 ? '#666' : '#e74c3c';
+
+          submitBtn.disabled = !(nameValid && emailValid && messageValid);
+        }
+
+        // Handle blur events for required fields
+        Object.entries(inputs).forEach(([fieldName, input]) => {
+          const label = input.previousElementSibling;
+          const requiredSpan = label.querySelector('.required');
+          const hint = input.nextElementSibling;
+
+          requiredSpan.style.opacity = '0';
+
+          input.addEventListener('blur', function () {
+            if (!this.value.trim()) {
+              requiredSpan.style.opacity = '1';
+              hint.style.display = 'none';
+            } else {
+              requiredSpan.style.opacity = '0';
+              // Show appropriate validation message
+              if (fieldName === 'email' && !isValidEmail(this.value.trim())) {
+                hint.style.display = 'block';
+              } else if (fieldName === 'name' && this.value.trim().length < 2) {
+                hint.style.display = 'block';
+              }
+            }
+          });
+
+          input.addEventListener('input', function () {
+            if (requiredSpan.style.opacity === '1') {
+              requiredSpan.style.opacity = this.value.trim() ? '0' : '1';
+            }
+            validateForm();
+          });
+        });
+
+        // Update character count
+        inputs.message.addEventListener('input', function () {
+          const length = this.value.length;
+          charCount.textContent = length;
+          charCount.style.color = length >= 10 ? '#666' : '#e74c3c';
+
+          if (length > maxLength) {
+            this.value = this.value.substring(0, maxLength);
+            charCount.textContent = maxLength;
+          }
+        });
+
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const name = inputs.name.value;
+          const email = inputs.email.value;
+          const message = inputs.message.value;
+
+          // Simulate form submission
+          submitBtn.textContent = 'Sending...';
+          submitBtn.disabled = true;
+
+          // Show confirmation popup
+          setTimeout(() => {
+            popup.querySelector(
+              '.message',
+            ).textContent = `Thank you ${name}! Your message has been sent.`;
+            popup.classList.add('show');
+
+            // Reset form
+            contactForm.reset();
+            submitBtn.disabled = true; // Disable button after reset
+            submitBtn.textContent = 'Send Message';
+
+            // Hide popup after 3 seconds
+            setTimeout(() => {
+              popup.classList.remove('show');
+            }, 3000);
+          }, 1500);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Welcome to JRWilde Inc</h1>
+      <p>Excellence in Professional Solutions</p>
+    </header>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <section id="home" class="hero">
+        <h2>Your Success is Our Priority</h2>
+        <p>
+          JRWilde Inc delivers exceptional solutions tailored to your business
+          needs, ensuring growth and success in today's dynamic market.
+        </p>
+      </section>
+
+      <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>
+          Founded with a vision to transform businesses through innovative
+          solutions, JRWilde Inc has been a trusted partner for companies across
+          various industries. Our commitment to excellence and customer
+          satisfaction sets us apart in the market.
+        </p>
+        <div class="features">
+          <div class="feature-card">
+            <h3>Professional Excellence</h3>
+            <p>
+              With years of industry experience, we bring professional
+              excellence to every project we undertake.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>Custom Solutions</h3>
+            <p>
+              We develop tailored solutions that perfectly align with your
+              business objectives and requirements.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>Dedicated Support</h3>
+            <p>
+              Our team provides comprehensive support to ensure your continued
+              success.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services-section">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Business Consulting</h3>
+            <p>Strategic guidance for business growth and optimization</p>
+          </div>
+          <div class="service-card">
+            <h3>Project Management</h3>
+            <p>Professional oversight of project implementation</p>
+          </div>
+          <div class="service-card">
+            <h3>Digital Solutions</h3>
+            <p>Cutting-edge digital transformation services</p>
+          </div>
+          <div class="service-card">
+            <h3>Market Analysis</h3>
+            <p>Comprehensive market research and analysis</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="team-section">
+        <h2>Our Team</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <img
+              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80&fit=facearea&facepad=3.5"
+              alt="Jeff Wilde"
+              style="object-position: center 30%"
+            />
+            <h3>Jeff Wilde</h3>
+            <p class="title">Founder & Lead Solutions Architect</p>
+            <p class="bio">
+              With 20+ years in enterprise software development, Jeff leads our
+              technical strategy and architecture decisions.
+            </p>
+          </div>
+          <div class="team-card">
+            <img
+              src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&q=80"
+              alt="Sarah Chen"
+            />
+            <h3>Sarah Chen</h3>
+            <p class="title">Senior Full Stack Developer</p>
+            <p class="bio">
+              Sarah specializes in React, Node.js, and cloud architecture,
+              leading our most complex web applications.
+            </p>
+          </div>
+          <div class="team-card">
+            <img
+              src="https://images.unsplash.com/photo-1463453091185-61582044d556?auto=format&fit=crop&w=300&q=80"
+              alt="Michael Rodriguez"
+            />
+            <h3>Michael Rodriguez</h3>
+            <p class="title">Database Architecture Lead</p>
+            <p class="bio">
+              Michael excels in designing scalable database solutions using SQL
+              and NoSQL technologies.
+            </p>
+          </div>
+          <div class="team-card">
+            <img
+              src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=300&q=80"
+              alt="Emily Thompson"
+            />
+            <h3>Emily Thompson</h3>
+            <p class="title">Frontend Development Lead</p>
+            <p class="bio">
+              Emily crafts exceptional user experiences using modern JavaScript
+              frameworks and UI/UX best practices.
+            </p>
+          </div>
+          <div class="team-card">
+            <img
+              src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=300&q=80"
+              alt="David Kumar"
+            />
+            <h3>David Kumar</h3>
+            <p class="title">DevOps Engineer</p>
+            <p class="bio">
+              David manages our CI/CD pipelines and cloud infrastructure,
+              ensuring smooth deployments and scaling.
+            </p>
+          </div>
+          <div class="team-card">
+            <img
+              src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=300&q=80"
+              alt="Lisa Martinez"
+            />
+            <h3>Lisa Martinez</h3>
+            <p class="title">Backend Development Lead</p>
+            <p class="bio">
+              Lisa specializes in API design, microservices architecture, and
+              high-performance systems.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name"
+              >Name <span class="required">* Required</span></label
+            >
+            <input type="text" id="name" required />
+            <small class="input-hint" style="color: #e74c3c; display: none"
+              >Minimum 2 characters</small
+            >
+          </div>
+          <div class="form-group">
+            <label for="email"
+              >Email <span class="required">* Required</span></label
+            >
+            <input type="email" id="email" required />
+            <small class="input-hint" style="color: #e74c3c; display: none"
+              >Please enter a valid email address</small
+            >
+          </div>
+          <div class="form-group">
+            <label for="message"
+              >Message <span class="required">* Required</span></label
+            >
+            <textarea id="message" rows="5" maxlength="500" required></textarea>
+            <small class="input-hint">
+              Characters: <span id="charCount">0</span> (Minimum: 10, Maximum:
+              500)
+            </small>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2023 JRWilde Inc. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

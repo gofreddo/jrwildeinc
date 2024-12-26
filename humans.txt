@@ -1,0 +1,10 @@
+/* TEAM */
+    Founder: Jeff Wilde
+    Contact: jeff@jrwilde.com
+    From: Vancouver, Canada
+
+/* SITE */
+    Last update: 2024/01/01
+    Language: English
+    Doctype: HTML5
+    IDE: VS Code

@@ -1,0 +1,6 @@
+Contact: mailto:security@jrwilde.com
+Expires: 2025-01-01T00:00:00.000Z
+Encryption: https://jrwilde.com/pgp-key.txt
+Preferred-Languages: en
+Canonical: https://jrwilde.com/.well-known/security.txt
+Policy: https://jrwilde.com/security-policy

@@ -83,7 +83,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Arial', sans-serif;
+        font-family: "Arial", sans-serif;
       }
 
       body {
@@ -98,7 +98,7 @@
             rgba(44, 62, 80, 0.9),
             rgba(44, 62, 80, 0.9)
           ),
-          url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');
+          url("https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80");
         background-size: cover;
         background-position: center;
         color: white;
@@ -144,13 +144,32 @@
         text-align: center;
         margin-bottom: 3rem;
         background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-          url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1920&q=80');
+          url("https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1920&q=80");
         background-size: cover;
         background-position: center;
         color: white;
         padding: 8rem 2rem;
         border-radius: 10px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+        color: #ffffff;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+        color: #ffffff;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
 
       .features {
@@ -170,7 +189,7 @@
             rgba(255, 255, 255, 0.95),
             rgba(255, 255, 255, 0.95)
           ),
-          url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80');
+          url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80");
         background-size: cover;
         background-position: center;
         border: 1px solid rgba(0, 0, 0, 0.1);
@@ -234,7 +253,7 @@
             rgba(255, 255, 255, 0.95),
             rgba(255, 255, 255, 0.95)
           ),
-          url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80');
+          url("https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80");
         background-size: cover;
         background-position: center;
         padding: 2rem;
@@ -351,7 +370,7 @@
             rgba(255, 255, 255, 0.9),
             rgba(255, 255, 255, 0.9)
           ),
-          url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1920&q=80');
+          url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1920&q=80");
         background-size: cover;
         background-position: center;
       }
@@ -486,18 +505,18 @@
       }
     </style>
     <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const contactForm = document.querySelector('.contact-form');
-        const submitBtn = contactForm.querySelector('.btn');
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.querySelector(".contact-form");
+        const submitBtn = contactForm.querySelector(".btn");
         const inputs = {
-          name: document.getElementById('name'),
-          email: document.getElementById('email'),
-          message: document.getElementById('message'),
+          name: document.getElementById("name"),
+          email: document.getElementById("email"),
+          message: document.getElementById("message"),
         };
 
         const emailHint = inputs.email.nextElementSibling;
         const nameHint = inputs.name.nextElementSibling;
-        const charCount = document.getElementById('charCount');
+        const charCount = document.getElementById("charCount");
         const maxLength = 500;
 
         // Validate email format
@@ -513,21 +532,21 @@
 
           // Show/hide name hint
           if (inputs.name.value.trim() && !nameValid) {
-            nameHint.style.display = 'block';
+            nameHint.style.display = "block";
           } else {
-            nameHint.style.display = 'none';
+            nameHint.style.display = "none";
           }
 
           // Show/hide email hint
           if (inputs.email.value.trim() && !emailValid) {
-            emailHint.style.display = 'block';
+            emailHint.style.display = "block";
           } else {
-            emailHint.style.display = 'none';
+            emailHint.style.display = "none";
           }
 
           // Update character count color
           const messageLength = inputs.message.value.length;
-          charCount.style.color = messageLength >= 10 ? '#666' : '#e74c3c';
+          charCount.style.color = messageLength >= 10 ? "#666" : "#e74c3c";
 
           submitBtn.disabled = !(nameValid && emailValid && messageValid);
         }
@@ -535,39 +554,39 @@
         // Handle blur events for required fields
         Object.entries(inputs).forEach(([fieldName, input]) => {
           const label = input.previousElementSibling;
-          const requiredSpan = label.querySelector('.required');
+          const requiredSpan = label.querySelector(".required");
           const hint = input.nextElementSibling;
 
-          requiredSpan.style.opacity = '0';
+          requiredSpan.style.opacity = "0";
 
-          input.addEventListener('blur', function () {
+          input.addEventListener("blur", function () {
             if (!this.value.trim()) {
-              requiredSpan.style.opacity = '1';
-              hint.style.display = 'none';
+              requiredSpan.style.opacity = "1";
+              hint.style.display = "none";
             } else {
-              requiredSpan.style.opacity = '0';
+              requiredSpan.style.opacity = "0";
               // Show appropriate validation message
-              if (fieldName === 'email' && !isValidEmail(this.value.trim())) {
-                hint.style.display = 'block';
-              } else if (fieldName === 'name' && this.value.trim().length < 2) {
-                hint.style.display = 'block';
+              if (fieldName === "email" && !isValidEmail(this.value.trim())) {
+                hint.style.display = "block";
+              } else if (fieldName === "name" && this.value.trim().length < 2) {
+                hint.style.display = "block";
               }
             }
           });
 
-          input.addEventListener('input', function () {
-            if (requiredSpan.style.opacity === '1') {
-              requiredSpan.style.opacity = this.value.trim() ? '0' : '1';
+          input.addEventListener("input", function () {
+            if (requiredSpan.style.opacity === "1") {
+              requiredSpan.style.opacity = this.value.trim() ? "0" : "1";
             }
             validateForm();
           });
         });
 
         // Update character count
-        inputs.message.addEventListener('input', function () {
+        inputs.message.addEventListener("input", function () {
           const length = this.value.length;
           charCount.textContent = length;
-          charCount.style.color = length >= 10 ? '#666' : '#e74c3c';
+          charCount.style.color = length >= 10 ? "#666" : "#e74c3c";
 
           if (length > maxLength) {
             this.value = this.value.substring(0, maxLength);
@@ -575,7 +594,7 @@
           }
         });
 
-        contactForm.addEventListener('submit', function (e) {
+        contactForm.addEventListener("submit", function (e) {
           e.preventDefault();
 
           const name = inputs.name.value;
@@ -583,24 +602,24 @@
           const message = inputs.message.value;
 
           // Simulate form submission
-          submitBtn.textContent = 'Sending...';
+          submitBtn.textContent = "Sending...";
           submitBtn.disabled = true;
 
           // Show confirmation popup
           setTimeout(() => {
             popup.querySelector(
-              '.message',
+              ".message"
             ).textContent = `Thank you ${name}! Your message has been sent.`;
-            popup.classList.add('show');
+            popup.classList.add("show");
 
             // Reset form
             contactForm.reset();
             submitBtn.disabled = true; // Disable button after reset
-            submitBtn.textContent = 'Send Message';
+            submitBtn.textContent = "Send Message";
 
             // Hide popup after 3 seconds
             setTimeout(() => {
-              popup.classList.remove('show');
+              popup.classList.remove("show");
             }, 3000);
           }, 1500);
         });
@@ -624,7 +643,7 @@
 
     <main class="main-content">
       <section id="home" class="hero">
-        <h2>Your Success is Our Priority</h2>
+        <h1>Your Success is Our Priority</h1>
         <p>
           JRWilde Inc delivers exceptional solutions tailored to your business
           needs, ensuring growth and success in today's dynamic market.
